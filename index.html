@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisy UI Cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailWind Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <!-- body section -->
+  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
+    <!-- Login Form Section -->
+    <form class="bg-white w-[402px] rounded-2xl p-8">
+      <!--Mobile Number-->
+      <div>
+        <label for="" class="text-base font-semibold text-[#080808]"
+          >Mobile Number</label
+        >
+        <br />
+        <input
+          type="text"
+          placeholder="Enter Your Number"
+          class="input bg-[#F4F5F7] p-5 rounded-3xl mt-3 h-12"
+        />
+      </div>
+      <!-- 4 digit pin -->
+      <div class="mt-5">
+        <label for="" class="text-base font-semibold text-[#080808]"
+          >4 Digit Pin</label
+        >
+        <br />
+        <input
+          type="text"
+          placeholder="Enter 4 Digit Pin"
+          class="input bg-[#F4F5F7] p-5 rounded-3xl mt-3 h-12"
+        />
+      </div>
+      <button
+        class="btn bg-[#0874F2] text-white font-semibold text-base mt-3 w-full rounded-3xl h-12"
+      >
+        Login
+      </button>
+    </form>
+  </body>
+</html>
