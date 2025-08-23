@@ -3,9 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wardoo</title>
+    <link rel="shortcut icon" href="./assets/Group.png" />
+    <!-- font awesome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- daisy UI Cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailWind Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Home</h1>
+
+  <!-- body section -->
+  <body class="bg-[#F4F5F7] h-[100vh]">
+    <!-- nav section -->
+    <div
+      class="parent-div flex items-center justify-between max-w-lg mx-auto border-b-1 border-gray-300 p-3"
+    >
+      <!-- div-1 -->
+      <div class="flex items-center">
+        <img src="./assets/Group.png" alt="logo" class="h-12" />
+        <div>
+          <h2 class="font-extrabold text-lg text-[#080808]">
+            $<span>45000</span>
+          </h2>
+          <p class="text-[#797777] text-[14px]">Available Balance</p>
+        </div>
+      </div>
+      <!-- div-2 -->
+      <div>
+        <button class="btn text-[#797777]">
+          <i
+            class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
+          ></i>
+          Log Out
+        </button>
+      </div>
+    </div>
+    <!-- welcome to Wardoo section -->
+    <div class="max-w-lg mx-auto p-5 mt-5">
+      <h1 class="text-2xl text-[#080808] font-bold">🔥 Welcome to Wardoo!</h1>
+      <p class="text-base text-[#6d6363cc] mt-3">
+        Enjoy easy and convenient financial services with us. CashOut charge is
+        low and
+      </p>
+    </div>
   </body>
 </html>
