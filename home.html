@@ -168,7 +168,7 @@
             >
             <br />
             <input
-              type="text"
+              type="password"
               placeholder="Enter 4 digit pin number"
               class="input rounded-2xl mt-3 mb-4 w-full"
               id="add-pin"
@@ -199,7 +199,7 @@
               type="text"
               placeholder="Enter Agent number (8-digit)"
               class="input rounded-2xl mt-3 mb-4 w-full"
-              id="account-number"
+              id="agent-number"
             />
           </div>
           <!-- Withdraw Amount-->
@@ -224,12 +224,64 @@
               type="text"
               placeholder="Enter 4 digit pin number"
               class="input rounded-2xl mt-3 mb-4 w-full"
-              id="add-pin"
+              id="withdraw-pin"
             />
           </div>
           <!-- Add Money Button -->
           <button id="withdraw-btn" class="btn btn-primary rounded-2xl w-full">
             Withdraw Money
+          </button>
+        </form>
+      </div>
+
+      <!-- -_-_--section-3 Transfer Money_-_- -->
+
+      <!-- style="display: none" -->
+
+      <div id="transfer-money-parent" class="max-w-lg mx-auto p-4">
+        <h1 class="font-bold text-lg text-[#313030] p-2">Transfer Money</h1>
+        <form class="bg-white p-4 rounded-2xl">
+          <!-- Bank Account Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >User Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter number (8-digit)"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="user-account-num"
+            />
+          </div>
+          <!-- Withdraw Amount-->
+          <div>
+            <label class="text-base font-medium text-[#555454]">Amount</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter amount to transfer"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="transfer-amount"
+              required
+            />
+          </div>
+          <!-- Pin Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Pin Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="transfer-pin"
+            />
+          </div>
+          <!-- Add Money Button -->
+          <button id="transfer-btn" class="btn btn-primary rounded-2xl w-full">
+            Send Now
           </button>
         </form>
       </div>
