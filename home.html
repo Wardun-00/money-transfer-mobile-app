@@ -64,15 +64,17 @@
       <!-- card section  -->
 
       <div class="grid grid-cols-3 max-w-lg gap-4 mx-auto p-4">
-        <!-- card-1 -->
+        <!-- card-1 (Add Money) -->
         <div
+          id="add-button"
           class="min-h-[90px] text-center place-content-center border-1 border-gray-300 rounded-xl cursor-pointer"
         >
           <img src="./assets/wallet1.png" alt="wallet1" class="mx-auto" />
           <h2>Add Money</h2>
         </div>
-        <!-- card-2 -->
+        <!-- card-2 (Cash Out)-->
         <div
+          id="Cashout-Button"
           class="min-h-[90px] text-center place-content-center border-1 border-gray-300 rounded-xl cursor-pointer"
         >
           <img src="./assets/send1.png" alt="wallet1" class="mx-auto" />
@@ -109,70 +111,128 @@
       </div>
     </div>
 
-    <!-- Add Money section -->
-    <div class="max-w-lg mx-auto p-5">
-      <h1 class="font-bold text-lg text-[#313030] p-2">Add Money</h1>
-      <!-- add money box -->
-      <form class="bg-white p-4 rounded-2xl">
-        <!--Select Bank -->
-        <div>
-          <label class="text-base font-medium text-[#555454]"
-            >select A Bank</label
-          >
-          <br />
-          <select class="select rounded-2xl mt-3 mb-4 w-full" id="bank">
-            <option disabled selected>Select A bank</option>
-            <option>Sonali Bank</option>
-            <option>Rupali Bank</option>
-            <option>Agroni Bank</option>
-            <option>Islami Bank</option>
-            <option>Uttara Bank</option>
-            <option>DutchBangla Bank</option>
-          </select>
-        </div>
-        <!-- Bank Account Number -->
-        <div>
-          <label class="text-base font-medium text-[#555454]"
-            >Bank Account Number</label
-          >
-          <br />
-          <input
-            type="text"
-            placeholder="Enter 8 digit account number"
-            class="input rounded-2xl mt-3 mb-4 w-full"
-            id="account-number"
-          />
-        </div>
-        <!-- Amount to Add -->
-        <div>
-          <label class="text-base font-medium text-[#555454]"
-            >Amount to Add</label
-          >
-          <br />
-          <input
-            type="text"
-            placeholder="Add Amount to Add"
-            class="input rounded-2xl mt-3 mb-4 w-full"
-            id="add-amount"
-            required
-          />
-        </div>
-        <!-- Pin Number -->
-        <div>
-          <label class="text-base font-medium text-[#555454]">Pin Number</label>
-          <br />
-          <input
-            type="text"
-            placeholder="Enter 4 digit pin number"
-            class="input rounded-2xl mt-3 mb-4 w-full"
-            id="add-pin"
-          />
-        </div>
-        <!-- Add Money Button -->
-        <button id="add-money-btn" class="btn btn-primary rounded-2xl w-full">
-          Add Money
-        </button>
-      </form>
+    <!-- All Form Section -->
+    <div class="all-form-section">
+      <!-- Add Money section -->
+      <div id="add-money-parent" class="max-w-lg mx-auto p-5">
+        <h1 class="font-bold text-lg text-[#313030] p-2">Add Money</h1>
+        <!-- add money box -->
+        <form class="bg-white p-4 rounded-2xl">
+          <!--Select Bank -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >select A Bank</label
+            >
+            <br />
+            <select class="select rounded-2xl mt-3 mb-4 w-full" id="bank">
+              <option disabled selected>Select A bank</option>
+              <option>Sonali Bank</option>
+              <option>Rupali Bank</option>
+              <option>Agroni Bank</option>
+              <option>Islami Bank</option>
+              <option>Uttara Bank</option>
+              <option>DutchBangla Bank</option>
+            </select>
+          </div>
+          <!-- Bank Account Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Bank Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 8 digit account number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="account-number"
+            />
+          </div>
+          <!-- Amount to Add -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Amount to Add</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to Add"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="add-amount"
+              required
+            />
+          </div>
+          <!-- Pin Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Pin Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="add-pin"
+            />
+          </div>
+          <!-- Add Money Button -->
+          <button id="add-money-btn" class="btn btn-primary rounded-2xl w-full">
+            Add Money
+          </button>
+        </form>
+      </div>
+
+      <!-- -_-_--section-2 CashOut_-_-_-_-_-_-_-_-_ -->
+      <div
+        id="cashout-parent"
+        style="display: none"
+        class="max-w-lg mx-auto p-4"
+      >
+        <h1 class="font-bold text-lg text-[#313030] p-2">Cash Out</h1>
+        <form class="bg-white p-4 rounded-2xl">
+          <!-- Bank Account Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Agent Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter Agent number (8-digit)"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="account-number"
+            />
+          </div>
+          <!-- Withdraw Amount-->
+          <div>
+            <label class="text-base font-medium text-[#555454]">Amount</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter amount Withdraw"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="withdraw-amount"
+              required
+            />
+          </div>
+          <!-- Pin Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Pin Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="add-pin"
+            />
+          </div>
+          <!-- Add Money Button -->
+          <button id="withdraw-btn" class="btn btn-primary rounded-2xl w-full">
+            Withdraw Money
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- script -->

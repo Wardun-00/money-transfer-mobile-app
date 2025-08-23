@@ -12,6 +12,7 @@ document.getElementById('logout').addEventListener('click', function(){
 
 const validPin = 8687;
 
+//Add money btn
 
 document.getElementById('add-money-btn').addEventListener
 
@@ -71,3 +72,56 @@ document.getElementById('add-money-btn').addEventListener
 
 
 })
+
+
+// ----------------------------------------------
+//toggling feature
+//-----------------------------------------------
+//toggle for add money
+document.getElementById('add-button').addEventListener('click', function(){
+    document.getElementById('cashout-parent').style.display='none'
+    document.getElementById('add-money-parent').style.display='block'
+})
+
+
+
+//CashOut money Withdraw feature
+document.getElementById('withdraw-btn').addEventListener('click', function(e){
+    e.preventDefault()
+   const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value)
+
+   const availableBalances = parseInt(document.getElementById('available-balance').innerText)
+
+//    console.log(withdrawAmount, availableBalances)
+
+const newBalance = availableBalances - withdrawAmount;
+// console.log(newBalance);
+
+document.getElementById('available-balance').innerText = newBalance;
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//toggle for cashOut
+
+document.getElementById('Cashout-Button').addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display='none'
+    document.getElementById('cashout-parent').style.display='block';
+})
+
+
+
