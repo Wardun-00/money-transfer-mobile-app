@@ -15,9 +15,17 @@
   </head>
 
   <!-- body section -->
-  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <!-- login form logo -->
+    <div
+      class="w-80 h-40 bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center"
+    >
+      <img src="./assets/Group.png" alt="" />
+    </div>
     <!-- Login Form Section -->
-    <form class="bg-white w-[402px] rounded-2xl p-8">
+    <form class="bg-white min-w-[350px] rounded-2xl p-8">
       <!--Mobile Number-->
       <div>
         <label for="" class="text-base font-semibold text-[#080808]"
@@ -26,6 +34,7 @@
         <br />
         <input
           type="text"
+          id="mobile-number"
           placeholder="Enter Your Number"
           class="input bg-[#F4F5F7] p-5 rounded-3xl mt-3 h-12"
         />
@@ -38,15 +47,20 @@
         <br />
         <input
           type="text"
+          id="pin-number"
           placeholder="Enter 4 Digit Pin"
           class="input bg-[#F4F5F7] p-5 rounded-3xl mt-3 h-12"
         />
       </div>
       <button
         class="btn bg-[#0874F2] text-white font-semibold text-base mt-3 w-full rounded-3xl h-12"
+        id="loginButton"
       >
         Login
       </button>
     </form>
+
+    <!-- js scripts -->
+    <script src="./script.js"></script>
   </body>
 </html>
