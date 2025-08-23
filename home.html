@@ -37,7 +37,7 @@
           <img src="./assets/Group.png" alt="logo" class="h-12" />
           <div>
             <h2 class="font-extrabold text-lg text-[#080808]">
-              $<span>45000</span>
+              $<span id="available-balance">45000</span>
             </h2>
             <p class="text-[#797777] text-[14px]">Available Balance</p>
           </div>
@@ -120,7 +120,7 @@
             >select A Bank</label
           >
           <br />
-          <select class="select rounded-2xl mt-3 mb-4 w-full">
+          <select class="select rounded-2xl mt-3 mb-4 w-full" id="bank">
             <option disabled selected>Select A bank</option>
             <option>Sonali Bank</option>
             <option>Rupali Bank</option>
@@ -140,6 +140,7 @@
             type="text"
             placeholder="Enter 11 digit account number"
             class="input rounded-2xl mt-3 mb-4 w-full"
+            id="account-number"
           />
         </div>
         <!-- Amount to Add -->
@@ -152,6 +153,7 @@
             type="text"
             placeholder="Add Amount to Add"
             class="input rounded-2xl mt-3 mb-4 w-full"
+            id="add-amount"
           />
         </div>
         <!-- Pin Number -->
@@ -162,10 +164,17 @@
             type="text"
             placeholder="Enter 4 digit pin number"
             class="input rounded-2xl mt-3 mb-4 w-full"
+            id="add-pin"
           />
         </div>
-        <button class="btn btn-primary rounded-2xl w-full">Add Money</button>
+        <!-- Add Money Button -->
+        <button id="add-money-btn" class="btn btn-primary rounded-2xl w-full">
+          Add Money
+        </button>
       </form>
     </div>
+
+    <!-- script -->
+    <script src="./home.js"></script>
   </body>
 </html>
