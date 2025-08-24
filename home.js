@@ -244,17 +244,24 @@ document.getElementById('transfer-button').addEventListener('click', function(){
 // ----------------------------------------------
 // Get Bonus features
 // ----------------------------------------------
-const bonusCode = 'kumkum'
+const bonusCode = 'kumkum';
+const bonusCode2 = '8687'; 
 document.getElementById('get-bonus-btn').addEventListener('click', function(){
     const bonusCoupon = document.getElementById('bonus-coupon').value;
 
-    if(bonusCoupon !== bonusCode){
-        alert('Wrong Coupon')
+    if(bonusCoupon == bonusCode ){
+        alert('Valobashi Apnake ')
         return;
     }
-    else{
-        alert('Valobashi Kumkum ')
+    else if(bonusCoupon == bonusCode2){
+        alert('Congratulation You Win Something Secret')
     }
+    else{
+        alert('Wrong coupon')
+    }
+    
+
+
 })
 
 // Toggle Get Bonus section
