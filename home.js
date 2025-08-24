@@ -232,7 +232,8 @@ e.preventDefault();
 
 // Toggle Transfer Money section
 
-document.getElementById('transfer-button').addEventListener('click', function(){
+document.getElementById('transfer-button').addEventListener('click', function(e){
+    e.preventDefault();
     document.getElementById('add-money-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='none'
     document.getElementById('get-bonus-parent').style.display='none';
