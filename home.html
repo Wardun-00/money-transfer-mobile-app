@@ -90,7 +90,7 @@
         </div>
         <!-- card-4 -->
         <div
-        id="bonus-button"
+          id="bonus-button"
           class="min-h-[90px] text-center place-content-center border-1 border-gray-300 rounded-xl cursor-pointer"
         >
           <img src="./assets/bonus1.png" alt="wallet1" class="mx-auto" />
@@ -98,6 +98,7 @@
         </div>
         <!-- card-5 -->
         <div
+          id="pay-bill-card"
           class="min-h-[90px] text-center place-content-center border-1 border-gray-300 rounded-xl cursor-pointer"
         >
           <img src="./assets/purse1.png" alt="wallet1" class="mx-auto" />
@@ -123,11 +124,11 @@
           <!--Select Bank -->
           <div>
             <label class="text-base font-medium text-[#555454]"
-              >select A Bank</label
+              >Select Bank</label
             >
             <br />
             <select class="select rounded-2xl mt-3 mb-4 w-full" id="bank">
-              <option disabled selected>Select A bank</option>
+              <option disabled selected>Select a bank</option>
               <option>Sonali Bank</option>
               <option>Rupali Bank</option>
               <option>Agroni Bank</option>
@@ -158,7 +159,7 @@
             <br />
             <input
               type="text"
-              placeholder="Add Amount to Add"
+              placeholder="Amount to Add"
               class="input rounded-2xl mt-3 mb-4 w-full"
               id="add-amount"
               required
@@ -298,13 +299,15 @@
         </form>
       </div>
 
-      <!-- -_-_--section-3 ( Get Bonus )_-_- -->
-       <div id="get-bonus-parent" class="max-w-lg mx-auto p-5" style="display: none;">
-        <h1 class="font-bold text-lg text-[#313030] p-2">Get Bonus </h1>
+      <!-- -_-_--section-4 ( Get Bonus )_-_- -->
+      <div
+        id="get-bonus-parent"
+        class="max-w-lg mx-auto p-5"
+        style="display: none"
+      >
+        <h1 class="font-bold text-lg text-[#313030] p-2">Get Bonus</h1>
         <!-- add money box -->
         <form class="bg-white p-4 rounded-2xl">
-          
-         
           <!-- Bank Account Number -->
           <div>
             <label class="text-base font-medium text-[#555454]"
@@ -323,8 +326,83 @@
           <button id="get-bonus-btn" class="btn btn-primary rounded-2xl w-full">
             Get Bonus
           </button>
-          </form>
-          
+        </form>
+      </div>
+
+      <!-- -_-_--section-5 Pay Bill_-_- -->
+
+      <div
+        id="pay-bill-parent"
+        class="max-w-lg mx-auto p-5"
+        style="display: none"
+      >
+        <h1 class="font-bold text-lg text-[#313030] p-2">Pay Bill</h1>
+        <!-- Pay bill box -->
+        <form class="bg-white p-4 rounded-2xl">
+          <!--Select Bank -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Select To Pay</label
+            >
+            <br />
+            <select class="select rounded-2xl mt-3 mb-4 w-full" id="pay-bank">
+              <option disabled selected>Select bank</option>
+              <option>Sonali Bank</option>
+              <option>Rupali Bank</option>
+              <option>Agroni Bank</option>
+              <option>Islami Bank</option>
+              <option>Uttara Bank</option>
+              <option>DutchBangla Bank</option>
+            </select>
+          </div>
+          <!-- Biller Account Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Biller account number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 8 digit account number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="biller-account-number"
+              required
+            />
+          </div>
+          <!-- Amount to Add -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Amount to Pay</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to Pay"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="pay-amount"
+              required
+            />
+          </div>
+          <!-- Pin Number -->
+          <div>
+            <label class="text-base font-medium text-[#555454]"
+              >Pin Number</label
+            >
+            <br />
+            <input
+              type="password"
+              placeholder="Enter 4 digit pin number"
+              class="input rounded-2xl mt-3 mb-4 w-full"
+              id="add-pay-pin"
+              required
+            />
+          </div>
+          <!-- Pay now Button -->
+          <button id="pay-money-btn" class="btn btn-primary rounded-2xl w-full">
+            Pay Now
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- script -->

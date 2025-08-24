@@ -91,6 +91,7 @@ document.getElementById('add-button').addEventListener('click', function(){
     document.getElementById('cashout-parent').style.display='none'
     document.getElementById('transfer-money-parent').style.display='none';
     document.getElementById('get-bonus-parent').style.display='none';
+    document.getElementById('pay-bill-parent').style.display='none';
     document.getElementById('add-money-parent').style.display='block'
 })
 
@@ -165,6 +166,7 @@ document.getElementById('Cashout-Button').addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display='none'
     document.getElementById('transfer-money-parent').style.display='none';
     document.getElementById('get-bonus-parent').style.display='none';
+    document.getElementById('pay-bill-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='block';
 })
 
@@ -237,6 +239,7 @@ document.getElementById('transfer-button').addEventListener('click', function(e)
     document.getElementById('add-money-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='none'
     document.getElementById('get-bonus-parent').style.display='none';
+    document.getElementById('pay-bill-parent').style.display='none';
     document.getElementById('transfer-money-parent').style.display='block';
 })
 
@@ -271,6 +274,79 @@ document.getElementById('bonus-button').addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='none';
     document.getElementById('transfer-money-parent').style.display= 'none';
+    document.getElementById('pay-bill-parent').style.display='none';
     document.getElementById('get-bonus-parent').style.display='block';
+
 })
 
+
+
+
+// ----------------------------------------------
+//Pay Money features
+// ----------------------------------------------
+
+
+const payPinNum = 8687;
+
+
+document.getElementById('pay-money-btn').addEventListener('click', function(e){
+    e.preventDefault();
+
+    
+
+    const billerAccount =document.getElementById('biller-account-number').value;
+
+     //for empty after reloading 
+      document.getElementById('biller-account-number').value ='';
+
+
+    const payAccount =parseInt(document.getElementById('pay-amount').value)
+
+    //for empty after reloading 
+      document.getElementById('pay-amount').value ='';
+
+
+    const addPayPin = parseInt(document.getElementById('add-pay-pin').value)
+
+    //for empty after reloading 
+      document.getElementById('add-pay-pin').value ='';
+
+    //condition part for biller account 
+
+    if(billerAccount.length < 8){
+        alert('fake');
+        return;
+    }
+    //for password
+    if(addPayPin !== payPinNum){
+        alert('wrong Password');
+        return;
+    }
+    else{
+        alert('Payment Successful')
+    }
+
+
+
+
+
+    //money (-) calculation available balance
+    const availableBalanceForPay = parseInt(document.getElementById('available-balance').innerText)
+
+    const totalNewBalanceAfterPay = availableBalanceForPay - payAccount
+
+    document.getElementById('available-balance').innerText = totalNewBalanceAfterPay;
+
+
+})
+
+// Toggle Get Bonus section
+
+document.getElementById('pay-bill-card').addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display = 'none';
+    document.getElementById('cashout-parent').style.display = 'none';
+    document.getElementById('transfer-money-parent').style.display = 'none';
+    document.getElementById('get-bonus-parent').style.display = 'none';
+    document.getElementById('pay-bill-parent').style.display = 'block';
+});
