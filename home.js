@@ -90,6 +90,7 @@ document.getElementById('add-money-btn').addEventListener
 document.getElementById('add-button').addEventListener('click', function(){
     document.getElementById('cashout-parent').style.display='none'
     document.getElementById('transfer-money-parent').style.display='none';
+    document.getElementById('get-bonus-parent').style.display='none';
     document.getElementById('add-money-parent').style.display='block'
 })
 
@@ -163,6 +164,7 @@ document.getElementById('available-balance').innerText = newBalance;
 document.getElementById('Cashout-Button').addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display='none'
     document.getElementById('transfer-money-parent').style.display='none';
+    document.getElementById('get-bonus-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='block';
 })
 
@@ -233,5 +235,34 @@ e.preventDefault();
 document.getElementById('transfer-button').addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='none'
+    document.getElementById('get-bonus-parent').style.display='none';
     document.getElementById('transfer-money-parent').style.display='block';
 })
+
+
+
+// ----------------------------------------------
+// Get Bonus features
+// ----------------------------------------------
+const bonusCode = 'kumkum'
+document.getElementById('get-bonus-btn').addEventListener('click', function(){
+    const bonusCoupon = document.getElementById('bonus-coupon').value;
+
+    if(bonusCoupon !== bonusCode){
+        alert('Wrong Coupon')
+        return;
+    }
+    else{
+        alert('Valobashi Kumkum ')
+    }
+})
+
+// Toggle Get Bonus section
+
+document.getElementById('bonus-button').addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display='none';
+    document.getElementById('cashout-parent').style.display='none';
+    document.getElementById('transfer-money-parent').style.display= 'none';
+    document.getElementById('get-bonus-parent').style.display='block';
+})
+
