@@ -89,12 +89,14 @@ document.getElementById('add-money-btn').addEventListener
 //toggle for add money
 document.getElementById('add-button').addEventListener('click', function(){
     document.getElementById('cashout-parent').style.display='none'
+    document.getElementById('transfer-money-parent').style.display='none';
     document.getElementById('add-money-parent').style.display='block'
 })
 
 
-
+// ----------------------------------------------
 //CashOut money Withdraw feature
+// ----------------------------------------------
 const pinNum = 8687;
 
 document.getElementById('withdraw-btn').addEventListener('click', function(e){
@@ -156,18 +158,80 @@ document.getElementById('available-balance').innerText = newBalance;
 })
 
 
-
-
-
-
-
-
 //toggle for cashOut
 
 document.getElementById('Cashout-Button').addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display='none'
+    document.getElementById('transfer-money-parent').style.display='none';
     document.getElementById('cashout-parent').style.display='block';
 })
 
 
+// ----------------------------------------------
+//Transfer Money feature
+// ----------------------------------------------
+const validTransferPin = 8687;
+document.getElementById('transfer-btn').addEventListener('click', function(e){
+e.preventDefault();
+    // Declare User Account Number Value
+    const transferUserAccount = document.getElementById('user-account-num').value;
 
+    //empty string after click to send button
+
+    document.getElementById('user-account-num').value='';
+
+    // Declare Transfer Amount
+    const transferAmount = parseInt(document.getElementById('transfer-amount').value)
+
+    //empty string after click to send button
+    document.getElementById('transfer-amount').value='';
+
+    //declare 4digit pin number
+    const transferPin = parseInt(document.getElementById('transfer-pin').value)
+
+    //empty string after click to send button
+    
+    document.getElementById('transfer-pin').value='';
+
+
+    // console.log(transferUserAccount, transferAmount, transferPin);
+
+
+    //condition part
+
+    if(transferUserAccount.length < 8){
+        alert('Please Enter Valid Account Number');
+        return;
+    }
+
+    //condition for pin number
+    if( transferPin !== validTransferPin ){
+        alert('Please Enter Valid Pin');
+        return;
+    }
+    else{
+        alert('Transition Success')
+    }
+
+
+
+    
+    //money (-) after transfer successful
+    const transferAvailableBalance = parseInt(document.getElementById('available-balance').innerText)
+
+    const transferNewBalance = transferAvailableBalance - transferAmount;
+
+    
+    document.getElementById('available-balance').innerText = transferNewBalance;
+
+    
+})
+
+
+// Toggle Transfer Money section
+
+document.getElementById('transfer-button').addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display='none';
+    document.getElementById('cashout-parent').style.display='none'
+    document.getElementById('transfer-money-parent').style.display='block';
+})
