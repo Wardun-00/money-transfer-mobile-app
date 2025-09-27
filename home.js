@@ -1,4 +1,4 @@
-//logOut section work
+ //logOut section work
 
 document.getElementById('logout').addEventListener('click', function(){
     window.location.href='./index.html'
@@ -87,13 +87,11 @@ document.getElementById('add-money-btn').addEventListener
 //toggling feature
 //-----------------------------------------------
 //toggle for add money
-document.getElementById('add-button').addEventListener('click', function(){
-    document.getElementById('cashout-parent').style.display='none'
+document.getElementById('cashout-parent').style.display='none'
     document.getElementById('transfer-money-parent').style.display='none';
     document.getElementById('get-bonus-parent').style.display='none';
     document.getElementById('pay-bill-parent').style.display='none';
     document.getElementById('add-money-parent').style.display='block'
-})
 
 
 // ----------------------------------------------
